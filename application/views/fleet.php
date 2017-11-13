@@ -6,14 +6,14 @@
     <thead>
       <tr>
           <th>ID</th>
-          <th>Make</th>
+          <th>Manufacturer</th>
           <th>Model</th>
       </tr>
     </thead>
     {fleet}
       <tr>
         <td><a href="/fleet/{id}">{id}</a></td>
-        <td>{make}</td>
+        <td>{manufacturer}</td>
         <td>{model}</td>
       </tr>
     {/fleet}

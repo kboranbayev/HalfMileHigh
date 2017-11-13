@@ -1,4 +1,4 @@
-id,make,model,price,seats,reach,cruise,takeoff,hourly,key
+id,manufacturer,model,price,seats,reach,cruise,takeoff,hourly,key
 caravan,Boeing,747,1400,100,55000,750,350,2500,0
 baron,Lockheed Martin,Arrow,700,100,55000,750,350,2500,1
 citation,Boeing,Model 4,600,100,55000,750,350,2500,2

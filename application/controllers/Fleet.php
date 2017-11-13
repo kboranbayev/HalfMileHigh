@@ -51,7 +51,7 @@ class Fleet extends Application
         }
 
         $this->data['id'] = $plane->id;
-        $this->data['make'] = $plane->manufacturer;
+        $this->data['manufacturer'] = $plane->manufacturer;
         $this->data['model'] = $plane->model;
         $this->data['price'] = $plane->price;
         $this->data['seats'] = $plane->seats;
@@ -96,7 +96,7 @@ class Fleet extends Application
 
         $fields = array(
             'fid'      => form_label('ID') . form_input('plane', $plane->id),
-            'fmake'      => form_label('Make') . form_input('plane', $plane->manufacturer),
+            'fmanufacturer'      => form_label('Manufacturer') . form_input('plane', $plane->manufacturer),
             'fmodel'      => form_label('Model') . form_input('plane', $plane->model),
             'fprice'      => form_label('Price') . form_input('plane', $plane->price),
             'fseats'      => form_label('Seats') . form_input('plane', $plane->seats),

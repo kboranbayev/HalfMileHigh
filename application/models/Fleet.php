@@ -8,7 +8,7 @@ include('Entity.php');
  */
 class Fleet extends Entity {
     private $id;      // holds aircraft code
-    private $make;    // holds manufacturer company of a plane
+    private $manufacturer;    // holds manufacturer company of a plane
     private $model;   // holds plane model
     private $price;   // holds price 
     private $seats;   // holds total seats of a plane
@@ -36,18 +36,18 @@ class Fleet extends Entity {
 
     /**
      * Setter for plane manufacturer
-     * @param string $make
+     * @param string $manufacturer
      */
-    public function setManufacturer($make) {
-      $this->make = $make;
+    public function setManufacturer($manufacturer) {
+      $this->manufacturer = $manufacturer;
     }
   
     /**
      * Getter for plane manufacturer
-     * @return string $make
+     * @return string $manufacturer
      */
     public function getManufacturer() {
-      return $this->make;
+      return $this->manufacturer;
     }
 
     /**

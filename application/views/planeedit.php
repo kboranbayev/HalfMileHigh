@@ -1,7 +1,7 @@
 <h1>Plane {id}</h1>
 <form role="form" action="/fleet/submit" method="post">
     {fid}<br/>
-    {fmake}<br/>
+    {fmanufacturer}<br/>
     {fmodel}<br/>
     {fprice}<br/>
     {fseats}<br/>

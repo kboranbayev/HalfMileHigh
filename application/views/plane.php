@@ -1,7 +1,7 @@
 <h1>Plane {id}</h1>
 <br /><br />
 <h2>ID: {id}</h2>
-<h2>Make: {make}</h2>
+<h2>Manufacturer: {manufacturer}</h2>
 <h2>Model: {model}</h2>
 <h2>Price: {price}</h2>
 <h2>Seats: {seats}</h2>
