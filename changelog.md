@@ -10,6 +10,10 @@ Project contributors:
 - Kuanysh
 - Jonathan
 
+## [Unreleased] - Nov 12, 8.02 pm
+### Updated
+- Updated fleet functions.
+
 ## [Unreleased] - Nov 12, 8.22 pm
 ### Added
 - Added ability to edit data in database file from console.

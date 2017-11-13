@@ -86,8 +86,9 @@ class Fleet extends Application
     private function showit()
     {
         $this->load->helper('form');
-        $plane = $this->session->userdata('plane');
-        $this->data['id'] = $plane->id;
+        $plane = (array)$this->session->userdata('plane');
+        $this->session->set_userdata('plane', $plane);
+        $this->data['id'] = $plane['id'];
 
         // if no errors, pass an empty message
         if (!isset($this->data['error'])) {
@@ -116,10 +117,10 @@ class Fleet extends Application
     public function submit()
     {
         // setup for validation
+        $this->load->helper('form');
         $this->load->library('form_validation');
         $this->form_validation->set_rules($this->fleetmdl->rules());
 
-        echo "EHITHITHTIHITIHT";
 
         // retrieve & update data transfer buffer
         $plane = (array) $this->session->userdata('plane');
