@@ -10,12 +10,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Flights extends Application
 {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://comp4711.local/flights
-	 */
+    /**
+     * Index Page for this controller.
+     *
+     * Maps to the following URL
+     * 		http://comp4711.local/flights
+     */
     
    public function index()
     {
