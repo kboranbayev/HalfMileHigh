@@ -46,7 +46,7 @@ class Wacky extends CI_Model
     /*
     * Returns airline by id from wacky server.
     */
-    public function getAirline(String $id)
+    public function getAirline($id)
     {
         return json_decode(curl_get_contents(WACKY_AIRLINES_URL . $id));
     }
@@ -54,7 +54,7 @@ class Wacky extends CI_Model
     /*
     * Returns airport by id from wacky server.
     */
-    public function getAirport(String $id)
+    public function getAirport($id)
     {
         return json_decode(curl_get_contents(WACKY_AIRPORTS_URL . $id));
     }
@@ -62,7 +62,7 @@ class Wacky extends CI_Model
     /*
     * Returns airplane by id from wacky server.
     */
-    public function getAirplane(String $id)
+    public function getAirplane($id)
     {
         return json_decode($this->curl_get_contents(WACKY_AIRPLANES_URL . $id));
     }
@@ -70,7 +70,7 @@ class Wacky extends CI_Model
     /*
     * Returns region by id from wacky server.
     */
-    public function getRegion(String $id)
+    public function getRegion($id)
     {
         return json_decode(curl_get_contents(WACKY_REGIONS_URL . $id));
     }
