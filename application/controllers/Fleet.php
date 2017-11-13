@@ -97,7 +97,7 @@ class Fleet extends Application
 
         $fields = array(
             'fid'      => form_label('ID') . form_input('id', $plane['id']),
-            'fmake'      => form_label('Make') . form_input('make', $plane['manufacturer']),
+            'fmanufacturer'      => form_label('Manufacturer') . form_input('manufacturer', $plane['manufacturer']),
             'fmodel'      => form_label('Model') . form_input('model', $plane['model']),
             'fprice'      => form_label('Price') . form_input('price', $plane['price']),
             'fseats'      => form_label('Seats') . form_input('seats', $plane['seats']),
