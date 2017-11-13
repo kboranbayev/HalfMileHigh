@@ -86,8 +86,8 @@ class Fleet extends Application
     private function showit()
     {
         $this->load->helper('form');
-        $plane = (object)$this->session->userdata('plane');
-        $this->data['id'] = $plane->id;
+        $plane = $this->session->userdata('plane');
+        $this->data['id'] = $plane['id'];
 
         // if no errors, pass an empty message
         if (!isset($this->data['error'])) {
@@ -95,16 +95,16 @@ class Fleet extends Application
         }
 
         $fields = array(
-            'fid'      => form_label('ID') . form_input('plane', $plane->id),
-            'fmanufacturer'      => form_label('Manufacturer') . form_input('plane', $plane->manufacturer),
-            'fmodel'      => form_label('Model') . form_input('plane', $plane->model),
-            'fprice'      => form_label('Price') . form_input('plane', $plane->price),
-            'fseats'      => form_label('Seats') . form_input('plane', $plane->seats),
-            'freach'      => form_label('Reach') . form_input('plane', $plane->reach),
-            'fcruise'      => form_label('Cruise') . form_input('plane', $plane->cruise),
-            'ftakeoff'      => form_label('Takeoff') . form_input('plane', $plane->takeoff),
-            'fhourly'      => form_label('Hourly') . form_input('plane', $plane->hourly),
-            'zsubmit'    => form_submit('submit', 'Update Fleet'),
+            'fid'      => form_label('ID') . form_input('id', $plane['id']),
+            'fmanufacturer'      => form_label('Manufacturer') . form_input('manufacturer', $plane['manufacturer']),
+            'fmodel'      => form_label('Model') . form_input('model', $plane['model']),
+            'fprice'      => form_label('Price') . form_input('price', $plane['price']),
+            'fseats'      => form_label('Seats') . form_input('seats', $plane['seats']),
+            'freach'      => form_label('Reach') . form_input('reach', $plane['reach']),
+            'fcruise'      => form_label('Cruise') . form_input('cruise', $plane['cruise']),
+            'ftakeoff'      => form_label('Takeoff') . form_input('takeoff', $plane['takeoff']),
+            'fhourly'      => form_label('Hourly') . form_input('hourly', $plane['hourly']),
+            'zsubmit'    => form_submit('submit', 'Update Plane'),
         );
         $this->data = array_merge($this->data, $fields);
 
