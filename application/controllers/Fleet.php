@@ -42,11 +42,11 @@ class Fleet extends Application
         $role = $this->session->userdata('userrole');
         if ($role == ROLE_OWNER) {
             //All the data points to display
-            $plane = $this->fleetmdl->get($planeid);
+            $plane = (object)$this->fleetmdl->getPlane($planeid);
             $this->data['pagebody'] = 'planeedit';
         } else {
             //All the data points to display
-            $plane = $this->fleetmdl->get($planeid);
+            $plane = (object)$this->fleetmdl->getPlane($planeid);
             $this->data['pagebody'] = 'plane';
         }
 
@@ -77,7 +77,7 @@ class Fleet extends Application
         if ($id == null) {
             redirect('/fleet');
         }
-        $plane = $this->fleetmdl->get($id);
+        $plane = $this->fleetmdl->getPlane($id);
         $this->session->set_userdata('plane', $plane);
         $this->showit();
     }
@@ -86,7 +86,7 @@ class Fleet extends Application
     private function showit()
     {
         $this->load->helper('form');
-        $plane = $this->session->userdata('plane');
+        $plane = (object)$this->session->userdata('plane');
         $this->data['id'] = $plane->id;
 
         // if no errors, pass an empty message

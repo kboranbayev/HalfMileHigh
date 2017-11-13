@@ -22,7 +22,7 @@ class Fleetmdl extends CSV_Model
     }
 
     /**
-     * Returns a single plane by id.
+     * Returns a single plane by id from API.
      */
     public function get($id, $key2 = null)
     {
@@ -38,6 +38,23 @@ class Fleetmdl extends CSV_Model
         }
 
 				return $remotePlane;
+    }
+
+    /**
+     * Returns a single plane by id from csv file
+     * @return result holds data or null if not found
+     */
+    public function getPlane($id) {
+        $result = array();
+		foreach ($this->all() as $plane) {
+			if (strcasecmp($plane->id, $id) == 0) {
+				$result = (array)$plane;
+				break;
+			} else {
+				$result = null;
+			}
+		}
+		return $result;
     }
 
     // provide form validation rules
